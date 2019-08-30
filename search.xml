@@ -49,9 +49,9 @@
       
         <tags>
             
-            <tag> IOS </tag>
-            
             <tag> Xcode10 </tag>
+            
+            <tag> IOS </tag>
             
         </tags>
       
@@ -103,9 +103,9 @@
       
         <tags>
             
-            <tag> Cocoapods </tag>
-            
             <tag> IOS </tag>
+            
+            <tag> Cocoapods </tag>
             
         </tags>
       
