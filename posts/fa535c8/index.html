@@ -29,7 +29,7 @@
     version: '7.3.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":false,"show_result":false,"style":"default"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":true,"color":"#222","save":"auto"},
     fancybox: false,
@@ -56,7 +56,7 @@
 </script>
 
   <meta name="description" content="结合公司需要，参考网上分享者的文章和自己的实际操作，记录下模块化开发的过程，以免自己忘记，也希望能帮助到需要的人。by 简书">
-<meta name="keywords" content="IOS,模块化开发">
+<meta name="keywords" content="模块化开发,IOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS模块化开发 - 调用自己封装的私有库">
 <meta property="og:url" content="http://yoursite.com/posts/fa535c8/index.html">
@@ -87,7 +87,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1343491-22286cdeb173f8c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1343491-a300b5fcd12743ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1343491-63ff4060d4a93be9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-08-29T08:52:34.190Z">
+<meta property="og:updated_time" content="2019-08-31T08:09:09.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS模块化开发 - 调用自己封装的私有库">
 <meta name="twitter:description" content="结合公司需要，参考网上分享者的文章和自己的实际操作，记录下模块化开发的过程，以免自己忘记，也希望能帮助到需要的人。by 简书">
@@ -344,7 +344,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-29 16:52:34" itemprop="dateModified" datetime="2019-08-29T16:52:34+08:00">2019-08-29</time>
+                <time title="修改时间：2019-08-31 16:09:09" itemprop="dateModified" datetime="2019-08-31T16:09:09+08:00">2019-08-31</time>
               </span>
             
           
@@ -398,8 +398,8 @@
         <blockquote>
 <p>结合公司需要，参考网上分享者的文章和自己的实际操作，记录下模块化开发的过程，以免自己忘记，也希望能帮助到需要的人。<br>by <a href="https://www.jianshu.com/p/67a1d8385c80" target="_blank" rel="noopener">简书</a></p>
 </blockquote><a id="more"></a>
-<h2 id="1、创建-私有Spec-Repo"><a href="#1、创建-私有Spec-Repo" class="headerlink" title="1、创建 私有Spec Repo"></a>1、创建 私有<code>Spec Repo</code></h2><p>所谓<code>Spec Repo</code>，就是<code>Pods</code>的索引。一旦在<code>podfile</code>中设置<code>source</code>为某个私有repo的git地址，在进行<code>pod update</code>的时候就会去这个<code>repo</code>中进行检索，如果检索到对应的<code>pod</code>，会读取该<code>Pod</code>的<code>podspec</code>从而进行安装。<br> 一个<code>Spec Repo</code>的目录结构如下：<br><img src="http://upload-images.jianshu.io/upload_images/1343491-9b2b52f41b9ca206.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Spec Repo 目录结构"></p>
-<h5 id="为了便于管理码云私有库，可把创建的模块库-归纳于组织下，码云创建组织如下图："><a href="#为了便于管理码云私有库，可把创建的模块库-归纳于组织下，码云创建组织如下图：" class="headerlink" title="为了便于管理码云私有库，可把创建的模块库 归纳于组织下，码云创建组织如下图："></a>为了便于管理码云私有库，可把创建的模块库 归纳于组织下，码云创建组织如下图：</h5><p><img src="http://upload-images.jianshu.io/upload_images/1343491-e4ac3cb7c222bec1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="码云创建组织"></p>
+<h2 id="创建-私有Spec-Repo"><a href="#创建-私有Spec-Repo" class="headerlink" title="创建 私有Spec Repo"></a>创建 私有<code>Spec Repo</code></h2><p>所谓<code>Spec Repo</code>，就是<code>Pods</code>的索引。一旦在<code>podfile</code>中设置<code>source</code>为某个私有repo的git地址，在进行<code>pod update</code>的时候就会去这个<code>repo</code>中进行检索，如果检索到对应的<code>pod</code>，会读取该<code>Pod</code>的<code>podspec</code>从而进行安装。<br> 一个<code>Spec Repo</code>的目录结构如下：<br><img src="http://upload-images.jianshu.io/upload_images/1343491-9b2b52f41b9ca206.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Spec Repo 目录结构"></p>
+<h3 id="为了便于管理码云私有库，可把创建的模块库-归纳于组织下，码云创建组织如下图："><a href="#为了便于管理码云私有库，可把创建的模块库-归纳于组织下，码云创建组织如下图：" class="headerlink" title="为了便于管理码云私有库，可把创建的模块库 归纳于组织下，码云创建组织如下图："></a>为了便于管理码云私有库，可把创建的模块库 归纳于组织下，码云创建组织如下图：</h3><p><img src="http://upload-images.jianshu.io/upload_images/1343491-e4ac3cb7c222bec1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="码云创建组织"></p>
 <p>之后我们在组织内新建一个相应的<code>Repo</code>地址，之后添加<code>repo</code>到本地。<br><img src="http://upload-images.jianshu.io/upload_images/1343491-8a1e6b127bd10e2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="创建项目"></p>
 <p>使用命令创建本地<code>spec</code> 库</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1343491-727611fec6dab800.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
@@ -408,7 +408,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod repo add HCocaPodsSpecsManager https://gitee.com/modularized_management/HCocaPodsSpecsManager.git</span><br></pre></td></tr></table></figure>
 
 <p>成功后可以进入<code>~/.cocoapods/repos</code>目录下查看<code>HCocaPodsSpecsManager</code>这个目录了。</p>
-<h2 id="2、创建Pod项目工程文件"><a href="#2、创建Pod项目工程文件" class="headerlink" title="2、创建Pod项目工程文件"></a>2、创建Pod项目工程文件</h2><p>这里建议通过<code>CocoPods</code>的官方命令来进行<code>Pod</code>项目的创建，以测试项目<code>HStarTools</code>为例：<br>现在本地创建好文件夹（文件名可随意起，自己使用方便即可，不过最好规范），用于存放 Pod项目工程文件，下面以我创建的为例进行后续操作<br><img src="http://upload-images.jianshu.io/upload_images/1343491-c42768286b40be9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
+<h2 id="创建Pod项目工程文件"><a href="#创建Pod项目工程文件" class="headerlink" title="创建Pod项目工程文件"></a>创建Pod项目工程文件</h2><p>这里建议通过<code>CocoPods</code>的官方命令来进行<code>Pod</code>项目的创建，以测试项目<code>HStarTools</code>为例：<br>现在本地创建好文件夹（文件名可随意起，自己使用方便即可，不过最好规范），用于存放 Pod项目工程文件，下面以我创建的为例进行后续操作<br><img src="http://upload-images.jianshu.io/upload_images/1343491-c42768286b40be9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>然后在终端cd 到该目录下：<br><img src="http://upload-images.jianshu.io/upload_images/1343491-32cdde86bcbeb951.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>使用命令创建Pod项目工程文件 <code>pod lib create HStarTools</code>，然后等待终端反应，不出意外会出现下面几个问题：<br><img src="http://upload-images.jianshu.io/upload_images/1343491-d906d4fe3ee6dcc5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>之后会自动打开项目。</p>
@@ -418,7 +418,7 @@
 <p>之后要做的就是把库同步到Git上去了。这时候需要去组织中建立一个对应的仓库，例如：<br><img src="http://upload-images.jianshu.io/upload_images/1343491-e906a8b98659bf0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1343491-e968de4ccecb713c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>名称和 第二步创建的项目名称 保持一致。<br>点击创建。</p>
-<h5 id="Sourcetree-管理私有库文件操作如下："><a href="#Sourcetree-管理私有库文件操作如下：" class="headerlink" title="Sourcetree 管理私有库文件操作如下："></a>Sourcetree 管理私有库文件操作如下：</h5><p>为了方便以后上传文件（漏传、误操作等），用Sourcetree 管理本地仓库文件</p>
+<h3 id="Sourcetree-管理私有库文件操作如下："><a href="#Sourcetree-管理私有库文件操作如下：" class="headerlink" title="Sourcetree 管理私有库文件操作如下："></a>Sourcetree 管理私有库文件操作如下：</h3><p>为了方便以后上传文件（漏传、误操作等），用Sourcetree 管理本地仓库文件</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1343491-d84064f43332cfcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/1343491-65e3abe9cd51aab7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>然后进入 <img src="http://upload-images.jianshu.io/upload_images/1343491-c1ba8ff635a18fb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
@@ -436,16 +436,16 @@
 
 <p><img src="http://upload-images.jianshu.io/upload_images/1343491-03fd1ef043244ae1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
 <p>创建好版本后，再次验证：<br><img src="http://upload-images.jianshu.io/upload_images/1343491-22286cdeb173f8c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
-<h2 id="3、向Spec-Repo提交podspec"><a href="#3、向Spec-Repo提交podspec" class="headerlink" title="3、向Spec Repo提交podspec"></a>3、向Spec Repo提交podspec</h2><p>提交命令：<code>pod repo push HCocaPodsSpecsManager HStarTools.podspec</code></p>
+<h2 id="向Spec-Repo提交podspec"><a href="#向Spec-Repo提交podspec" class="headerlink" title="向Spec Repo提交podspec"></a>向Spec Repo提交podspec</h2><p>提交命令：<code>pod repo push HCocaPodsSpecsManager HStarTools.podspec</code></p>
 <p>成功后输入命令  <code>pod search HStarTools</code> 就可以搜索到你创建的私有库咯～<br><img src="http://upload-images.jianshu.io/upload_images/1343491-a300b5fcd12743ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
-<h4 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h4><p>我们可以在想要使用的项目中的<code>Podfile</code>里加入如下代码：</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>我们可以在想要使用的项目中的<code>Podfile</code>里加入如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;HStarTools&apos;,&apos;~&gt; 0.1.0&apos;</span><br></pre></td></tr></table></figure>
 
 <p>即可。<br>当然，由于我们的是私有<code>CocoaPods</code>库，因此最好告诉系统这个库的<code>source</code>在哪里，因此在<code>Podfile</code>文件上部也请加上Spec Repo的git地址</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://gitlab.com/xxx.git&apos;</span><br><span class="line">#第三方库的远程索引库 也必须添加，不然其他三方库找不到</span><br><span class="line">source &apos;https://github.com/CocoaPods/Specs.git&apos;</span><br></pre></td></tr></table></figure>
 
 <p>查看本地索引库,输入命令 <code>pod repo</code><br><img src="http://upload-images.jianshu.io/upload_images/1343491-63ff4060d4a93be9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片.png"></p>
-<h2 id="4、版本迭代和更新"><a href="#4、版本迭代和更新" class="headerlink" title="4、版本迭代和更新"></a>4、版本迭代和更新</h2><p>只需要正常提交版本到 git 仓库, 并且一定要打 <strong><em>tag</em></strong>  标记，然后更改 .podspec 中的 version 和 其他需要修改的信息 然后再次验证，通过之后提交即可~</p>
+<h2 id="版本迭代和更新"><a href="#版本迭代和更新" class="headerlink" title="版本迭代和更新"></a>版本迭代和更新</h2><p>只需要正常提交版本到 git 仓库, 并且一定要打 <strong><em>tag</em></strong>  标记，然后更改 .podspec 中的 version 和 其他需要修改的信息 然后再次验证，通过之后提交即可~</p>
 <p>再次感谢各位大佬们的分享！</p>
 
     </div>
@@ -474,9 +474,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/IOS/" rel="tag"><i class="fa fa-tag"></i>  IOS</a>
-            
               <a href="/tags/模块化开发/" rel="tag"><i class="fa fa-tag"></i>  模块化开发</a>
+            
+              <a href="/tags/IOS/" rel="tag"><i class="fa fa-tag"></i>  IOS</a>
             
           </div>
         
@@ -547,7 +547,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、创建-私有Spec-Repo"><span class="nav-number">1.</span> <span class="nav-text">1、创建 私有Spec Repo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为了便于管理码云私有库，可把创建的模块库-归纳于组织下，码云创建组织如下图："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">为了便于管理码云私有库，可把创建的模块库 归纳于组织下，码云创建组织如下图：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、创建Pod项目工程文件"><span class="nav-number">2.</span> <span class="nav-text">2、创建Pod项目工程文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Sourcetree-管理私有库文件操作如下："><span class="nav-number">2.0.0.1.</span> <span class="nav-text">Sourcetree 管理私有库文件操作如下：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、向Spec-Repo提交podspec"><span class="nav-number">3.</span> <span class="nav-text">3、向Spec Repo提交podspec</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用"><span class="nav-number">3.0.1.</span> <span class="nav-text">如何使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、版本迭代和更新"><span class="nav-number">4.</span> <span class="nav-text">4、版本迭代和更新</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-私有Spec-Repo"><span class="nav-number">1.</span> <span class="nav-text">创建 私有Spec Repo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为了便于管理码云私有库，可把创建的模块库-归纳于组织下，码云创建组织如下图："><span class="nav-number">1.1.</span> <span class="nav-text">为了便于管理码云私有库，可把创建的模块库 归纳于组织下，码云创建组织如下图：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Pod项目工程文件"><span class="nav-number">2.</span> <span class="nav-text">创建Pod项目工程文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sourcetree-管理私有库文件操作如下："><span class="nav-number">2.1.</span> <span class="nav-text">Sourcetree 管理私有库文件操作如下：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向Spec-Repo提交podspec"><span class="nav-number">3.</span> <span class="nav-text">向Spec Repo提交podspec</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用"><span class="nav-number">3.1.</span> <span class="nav-text">如何使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本迭代和更新"><span class="nav-number">4.</span> <span class="nav-text">版本迭代和更新</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -707,6 +707,26 @@
   <span class="author" itemprop="copyrightHolder">小豆丁</span>
 </div>
 
+<!--
+-->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/10/2018 00:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已运行  "+ Math.floor(dnum / 365) + " 年 " + Math.floor(dnum % 365) +" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -837,7 +857,7 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     meta: guest,
     pageSize: '20' || 10,
     visitor: false,
-    lang: 'zh-cn' || 'zh-cn',
+    lang: 'zh-CN' || 'zh-cn',
     path: location.pathname
   });
 }, window.Valine);
