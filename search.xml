@@ -22,9 +22,9 @@
             
             <tag> IOS </tag>
             
-            <tag> CocoaPods </tag>
-            
             <tag> 资源汇总 </tag>
+            
+            <tag> CocoaPods </tag>
             
         </tags>
       
@@ -49,9 +49,9 @@
       
         <tags>
             
-            <tag> IOS </tag>
-            
             <tag> Xcode10 </tag>
+            
+            <tag> IOS </tag>
             
         </tags>
       
@@ -76,9 +76,9 @@
       
         <tags>
             
-            <tag> 资源汇总 </tag>
-            
             <tag> 模块化开发 </tag>
+            
+            <tag> 资源汇总 </tag>
             
         </tags>
       
@@ -103,9 +103,9 @@
       
         <tags>
             
-            <tag> Cocoapods </tag>
-            
             <tag> IOS </tag>
+            
+            <tag> Cocoapods </tag>
             
         </tags>
       
